@@ -5,6 +5,7 @@
 
 **Default value:** false
 
+
 ### arm_float_abi
  The ARM floating point mode. This is either the string "hard", "soft", or
  "softfp". An empty string means to use the default one for the
@@ -47,16 +48,20 @@ No values for `target_cpu = "x64"`.
 
 **Default value:** "armadillo_user_shell/assets/contextual_config.json"
 
+
 ### bootfs_packages
  Build packages as FAR archives and store them in /system. This is required
  for --bootfs builds.
 
 **Default value:** false
 
+
 ### build_intel_gen
 
 **Default value for `target_cpu = "x64"`:** true
+
 **Default value for `target_cpu = "arm64"`:** false
+
 
 ### build_libvulkan_arm_mali
  This is a list of targets that will be built as drivers. If more than one
@@ -67,26 +72,33 @@ No values for `target_cpu = "x64"`.
 
 **Default value:** []
 
+
 ### build_msd_arm_mali
 
 **Default value for `target_cpu = "x64"`:** false
+
 **Default value for `target_cpu = "arm64"`:** true
+
 
 ### build_msd_vsl_gc
 
 **Default value:** false
 
+
 ### clang_prefix
 
 **Default value:** "../../../buildtools/linux-x64/clang/bin"
+
 
 ### current_cpu
 
 **Default value:** ""
 
+
 ### current_os
 
 **Default value:** ""
+
 
 ### dart_core_snapshot_kind
  Controls the kind of core snapshot linked into the standalone VM. Using a
@@ -94,6 +106,7 @@ No values for `target_cpu = "x64"`.
  code generation.
 
 **Default value:** "core"
+
 
 ### dart_custom_version_for_pub
  When this argument is a non-empty string, the version repoted by the
@@ -110,6 +123,7 @@ No values for `target_cpu = "x64"`.
 
 **Default value:** ""
 
+
 ### dart_debug
  Instead of using is_debug, we introduce a different flag for specifying a
  Debug build of Dart so that clients can still use a Release build of Dart
@@ -117,19 +131,23 @@ No values for `target_cpu = "x64"`.
 
 **Default value:** false
 
+
 ### dart_debug_optimization_level
  The optimization level to use for debug builds.
 
 **Default value:** "2"
 
+
 ### dart_default_app
 
 **Default value:** "dart_jit_app"
+
 
 ### dart_platform_sdk
  Build a SDK with less stuff. It excludes dart2js, ddc, and web libraries.
 
 **Default value:** true
+
 
 ### dart_runtime_mode
  Set the runtime mode. This affects how the runtime is built and what
@@ -152,24 +170,30 @@ No values for `target_cpu = "x64"`.
 
 **Default value:** "develop"
 
+
 ### dart_snapshot_kind
  Default to building app-jit snapshots. The simulator and cross builds
  override this to script snapshots to cut down on build time.
 
 **Default value for `target_cpu = "x64"`:** "app-jit"
+
 **Default value for `target_cpu = "arm64"`:** "script"
+
 
 ### dart_stripped_binary
  Path to stripped dart binary relative to build output directory.
 
 **Default value:** "dart"
 
+
 ### dart_target_arch
  Explicitly set the target architecture to use a simulator.
  Available options are: arm, arm64, x64, ia32, and dbc.
 
 **Default value for `target_cpu = "x64"`:** "x64"
+
 **Default value for `target_cpu = "arm64"`:** "arm64"
+
 
 ### dart_use_fallback_root_certificates
  Whether to fall back to built-in root certificates when they cannot be
@@ -177,17 +201,20 @@ No values for `target_cpu = "x64"`.
 
 **Default value:** false
 
+
 ### dart_use_tcmalloc
  Whether to link the standalone VM against tcmalloc. The standalone build of
  the VM enables this only for Linux builds.
 
 **Default value:** false
 
+
 ### dart_version_git_info
  Whether the Dart binary version string should include the git hash and
  git commit time.
 
 **Default value:** true
+
 
 ### dart_zlib_path
  The BUILD.gn file that we pull from chromium as part of zlib has a
@@ -197,6 +224,7 @@ No values for `target_cpu = "x64"`.
 
 **Default value:** "//third_party/zlib"
 
+
 ### data_image_size
  The size of the minfs data partition image to create. Normally this image
  is added to FVM, and can therefore expand as needed. It must be at least
@@ -204,33 +232,41 @@ No values for `target_cpu = "x64"`.
 
 **Default value:** "10m"
 
+
 ### enable_dummy_subsystem
 
 **Default value:** true
+
 
 ### enable_gfx_subsystem
 
 **Default value:** true
 
+
 ### enable_sketchy_subsystem
 
 **Default value:** true
+
 
 ### enable_value_subsystem
 
 **Default value:** false
 
+
 ### enable_views_subsystem
 
 **Default value:** true
+
 
 ### expat_build_root
 
 **Default value:** "//third_party/expat"
 
+
 ### experimental_web_entity_extraction
 
 **Default value:** false
+
 
 ### extra_authorized_keys_file
  Additional SSH authorized_keys file to include in the build.
@@ -239,43 +275,53 @@ No values for `target_cpu = "x64"`.
 
 **Default value:** ""
 
+
 ### extra_variants
  Additional variant toolchain configs to support.
  This is just added to `known_variants`, which see.
 
 **Default value:** []
 
+
 ### ffmpeg_profile
 
 **Default value for `target_cpu = "x64"`:** "max"
+
 **Default value for `target_cpu = "arm64"`:** "default"
+
 
 ### flutter1_default_app
 
 **Default value:** "flutter1_jit_app"
 
+
 ### flutter2_default_app
 
 **Default value:** "flutter2_jit_app"
+
 
 ### flutter_aot
  Enable ahead-of-time compilation on platforms where AOT is optional.
 
 **Default value:** false
 
+
 ### flutter_asserts_always_on
  Enable asserts, even in release builds.
 
 **Default value:** false
 
+
 ### flutter_default_app
 
 **Default value:** "flutter1_jit_app"
+
 
 ### flutter_runtime_mode
  The runtime mode ("debug", "profile", or "release")
 
 **Default value:** "debug"
+
 
 ### fuchsia_packages
  List of packages (a comma-separated string).  If unset, guessed based
@@ -283,36 +329,44 @@ No values for `target_cpu = "x64"`.
 
 **Default value:** []
 
+
 ### fuchsia_use_vulkan
  Consolidated build toggle for use of Vulkan across Fuchsia
 
 **Default value:** true
+
 
 ### fuchsia_vulkan_sdk
  Path to Fuchsia Vulkan SDK
 
 **Default value:** "//third_party/vulkan_loader_and_validation_layers"
 
+
 ### glm_build_root
 
 **Default value:** "//third_party/glm"
+
 
 ### goma_dir
  Absolute directory containing the Goma source code.
 
 **Default value:** "/usr/local/google/home/juliehockett/goma"
 
+
 ### host_byteorder
 
 **Default value:** "undefined"
+
 
 ### host_cpu
 
 **Default value:** "x64"
 
+
 ### host_os
 
 **Default value:** "linux"
+
 
 ### host_tools_dir
  This is the directory where host tools intended for manual use by
@@ -324,7 +378,9 @@ No values for `target_cpu = "x64"`.
  by an explicit install_host_tools() rule (see //build/host.gni).
 
 **Default value for `target_cpu = "x64"`:** "//topaz/out/x64/tools"
+
 **Default value for `target_cpu = "arm64"`:** "//topaz/out/arm64/tools"
+
 
 ### icu_use_data_file
  Tells icu to load an external data file rather than rely on the icudata
@@ -339,16 +395,19 @@ No values for `target_cpu = "x64"`.
 
 **Default value:** true
 
+
 ### is_debug
  Debug build.
 
 **Default value:** true
+
 
 ### kernel_cmdline_file
  File containing kernel command line arguments to roll into the
  bootdata image used for booting.
 
 **Default value:** ""
+
 
 ### known_variants
  List of variants that will form the basis for variant toolchains.
@@ -436,9 +495,11 @@ No values for `target_cpu = "x64"`.
 }
 }]
 
+
 ### magma_build_root
 
 **Default value:** "//garnet/lib/magma"
+
 
 ### magma_enable_developer_build
  Enable this to have the msd include a suite of tests and invoke them
@@ -446,14 +507,17 @@ No values for `target_cpu = "x64"`.
 
 **Default value:** false
 
+
 ### magma_enable_tracing
  Enable this to include fuchsia tracing capability
 
 **Default value:** true
 
+
 ### magma_python_path
 
 **Default value:** "/usr/local/google/home/juliehockett/fuchsia/third_party/mako"
+
 
 ### mesa_build_root
 
@@ -492,6 +556,7 @@ No values for `target_cpu = "arm64"`.
 
 **Default value:** "//garnet/drivers/gpu/msd-intel-gen"
 
+
 ### msd_intel_print_fps
 
 **Default value for `target_cpu = "x64"`:** false
@@ -522,9 +587,11 @@ No values for `target_cpu = "arm64"`.
 
 **Default value:** "//topaz/tools/prebuilt-dart-sdk/linux-x64"
 
+
 ### prebuilt_libvulkan_arm_path
 
 **Default value:** ""
+
 
 ### rustc_prefix
  Sets a custom base directory for `rustc` and `cargo`.
@@ -532,12 +599,14 @@ No values for `target_cpu = "arm64"`.
 
 **Default value:** "//buildtools/linux-x64/rust/bin"
 
+
 ### scene_manager_vulkan_swapchain
  0 - use normal swapchain
  1 - use vulkan swapchain, but wait for real display
  2 - use vulkan swapchain with fixed-size fake display
 
 **Default value:** 0
+
 
 ### scudo_default_options
  Default [Scudo](https://llvm.org/docs/ScudoHardenedAllocator.html)
@@ -548,6 +617,7 @@ No values for `target_cpu = "arm64"`.
 
 **Default value:** ["abort_on_error=1", "QuarantineSizeKb=0", "ThreadLocalQuarantineSizeKb=0"]
 
+
 ### sdk_dirs
  The directories to search for parts of the SDK.
 
@@ -555,6 +625,7 @@ No values for `target_cpu = "arm64"`.
  In the future, we'll search a pre-built SDK as well.
 
 **Default value:** ["//garnet/public", "//peridot/public", "//topaz/public"]
+
 
 ### select_variant
  List of "selectors" to request variant builds of certain targets.
@@ -623,12 +694,14 @@ No values for `target_cpu = "arm64"`.
 
 **Default value:** []
 
+
 ### select_variant_canonical
  *This should never be set as a build argument.*
  It exists only to be set in `toolchain_args`.
  See //build/toolchain/clang_toolchain.gni for details.
 
 **Default value:** []
+
 
 ### select_variant_shortcuts
  List of short names for commonly-used variant selectors.  Normally this
@@ -649,182 +722,231 @@ No values for `target_cpu = "arm64"`.
   name = "host_asan"
 }]
 
+
 ### shell_enable_vulkan
 
 **Default value:** false
+
 
 ### skia_android_serial
 
 **Default value:** ""
 
+
 ### skia_compile_processors
 
 **Default value:** false
+
 
 ### skia_enable_atlas_text
 
 **Default value:** false
 
+
 ### skia_enable_discrete_gpu
 
 **Default value:** true
+
 
 ### skia_enable_effects
 
 **Default value:** true
 
+
 ### skia_enable_flutter_defines
 
-**Default value:** false
+**Default value:** [false](/skia/BUILD.gn#38)
+
 **Current value:** true
+
 
 ### skia_enable_fontmgr_empty
 
 **Default value:** false
 
+
 ### skia_enable_gpu
 
 **Default value:** true
+
 
 ### skia_enable_pdf
 
 **Default value:** true
 
+
 ### skia_enable_spirv_validation
 
 **Default value:** false
+
 
 ### skia_enable_tools
 
 **Default value:** false
 
+
 ### skia_enable_vulkan_debug_layers
 
 **Default value:** false
+
 
 ### skia_generate_workarounds
 
 **Default value:** false
 
+
 ### skia_lex
 
 **Default value:** false
+
 
 ### skia_llvm_lib
 
 **Default value:** "LLVM"
 
+
 ### skia_llvm_path
 
 **Default value:** ""
+
 
 ### skia_qt_path
 
 **Default value:** ""
 
+
 ### skia_skqp_enable_driver_correctness_workarounds
 
 **Default value:** false
+
 
 ### skia_skqp_global_error_tolerance
 
 **Default value:** 0
 
+
 ### skia_tools_require_resources
 
 **Default value:** false
+
 
 ### skia_tools_vulkan_header_dir
 
 **Default value:** ""
 
+
 ### skia_use_angle
 
 **Default value:** false
 
+
 ### skia_use_dng_sdk
 
-**Default value:** true
+**Default value:** [true](/skia/BUILD.gn#61)
+
 **Current value:** false
+
 
 ### skia_use_egl
 
 **Default value:** false
 
+
 ### skia_use_expat
 
 **Default value:** true
 
+
 ### skia_use_fontconfig
 
-**Default value:** true
+**Default value:** [true](/skia/BUILD.gn#22)
+
 **Current value:** false
+
 
 ### skia_use_freetype
 
 **Default value:** true
 
+
 ### skia_use_icu
 
 **Default value:** true
+
 
 ### skia_use_legacy_gpu_pixel_ops
 
 **Default value:** false
 
+
 ### skia_use_libheif
 
 **Default value:** false
+
 
 ### skia_use_libjpeg_turbo
 
 **Default value:** true
 
+
 ### skia_use_libpng
 
 **Default value:** true
 
+
 ### skia_use_libwebp
 
-**Default value:** true
+**Default value:** [true](/skia/BUILD.gn#27)
+
 **Current value:** false
+
 
 ### skia_use_lua
 
 **Default value:** false
 
+
 ### skia_use_metal
 
 **Default value:** false
+
 
 ### skia_use_piex
 
 **Default value:** true
 
+
 ### skia_use_sfntly
 
-**Default value:** true
+**Default value:** [true](/skia/BUILD.gn#62)
+
 **Current value:** false
+
 
 ### skia_use_skcms
 
 **Default value:** true
 
+
 ### skia_use_vulkan
 
 **Default value:** false
+
 
 ### skia_use_zlib
 
 **Default value:** true
 
+
 ### skia_vulkan_header
 
 **Default value:** ""
 
+
 ### skia_vulkan_sdk
 
 **Default value:** ""
+
 
 ### system_package_key
  The package key to use for signing the system package. New keys can be
@@ -832,38 +954,49 @@ No values for `target_cpu = "arm64"`.
 
 **Default value:** "//build/development.key"
 
+
 ### target_cpu
 
 **Default value:** ""
-**Current value for `target_cpu = "x64"`:** "x64"
-**Current value for `target_cpu = "arm64"`:** "arm64"
+
+**Current value for `target_cpu = "x64"`:** ["x64"](https://fuchsia.googlesource.com/topaz/+/master/out/x64/args.gn#1)
+
+**Current value for `target_cpu = "arm64"`:** ["arm64"](https://fuchsia.googlesource.com/topaz/+/master/out/arm64/args.gn#1)
+
 
 ### target_os
 
 **Default value:** ""
+
 
 ### target_sysroot
  The absolute path of the sysroot that is used with the target toolchain.
 
 **Default value:** ""
 
+
 ### thinlto_cache_dir
  ThinLTO cache directory path.
 
 **Default value for `target_cpu = "x64"`:** "host_x64/thinlto-cache"
+
 **Default value for `target_cpu = "arm64"`:** "arm64-shared/thinlto-cache"
+
 
 ### thinlto_jobs
  Number of parallel ThinLTO jobs.
 
 **Default value:** 8
 
+
 ### toolchain_manifests
  Manifest files describing target libraries from toolchains.
  Can be either // source paths or absolute system paths.
 
 **Default value for `target_cpu = "x64"`:** ["/usr/local/google/home/juliehockett/fuchsia/buildtools/linux-x64/clang/lib/x86_64-fuchsia.manifest"]
+
 **Default value for `target_cpu = "arm64"`:** ["/usr/local/google/home/juliehockett/fuchsia/buildtools/linux-x64/clang/lib/aarch64-fuchsia.manifest"]
+
 
 ### toolchain_variant
  *This should never be set as a build argument.*
@@ -894,9 +1027,11 @@ No values for `target_cpu = "arm64"`.
 **Default value for `target_cpu = "x64"`:** {
   base = "//build/toolchain/fuchsia:x64"
 }
+
 **Default value for `target_cpu = "arm64"`:** {
   base = "//build/toolchain/fuchsia:arm64"
 }
+
 
 ### universal_variants
 
@@ -908,30 +1043,36 @@ No values for `target_cpu = "arm64"`.
   name = "release"
 }]
 
+
 ### use_analysis_server
  Whether to use the analysis server instead of the CLI.
 
 **Default value:** false
+
 
 ### use_ccache
  Set to true to enable compiling with ccache
 
 **Default value:** false
 
+
 ### use_frozen_with_cargo
  Allows Cargo.lock to be updated when performing local builds.
 
 **Default value:** true
+
 
 ### use_goma
  Set to true to enable distributed compilation using Goma.
 
 **Default value:** false
 
+
 ### use_lto
  Use link time optimization (LTO).
 
 **Default value:** false
+
 
 ### use_mock_magma
 
@@ -947,27 +1088,33 @@ No values for `target_cpu = "arm64"`.
 
 **Default value:** true
 
+
 ### use_scudo
  Enable the [Scudo](https://llvm.org/docs/ScudoHardenedAllocator.html)
  memory allocator for Fuchsia.
 
 **Default value:** false
 
+
 ### use_thinlto
  Use ThinLTO variant of LTO if use_lto = true.
 
 **Default value:** true
+
 
 ### use_vulkan_loader_for_tests
  Mesa doesn't properly handle loader-less operation;
  their GetInstanceProcAddr implementation returns 0 for some interfaces.
 
 **Default value for `target_cpu = "x64"`:** true
+
 **Default value for `target_cpu = "arm64"`:** false
+
 
 ### vk_loader_debug
 
 **Default value:** "warn,error"
+
 
 ### zedboot_cmdline_file
  File containing kernel command line arguments to roll into the
@@ -975,9 +1122,11 @@ No values for `target_cpu = "arm64"`.
 
 **Default value:** ""
 
+
 ### zircon_asserts
 
 **Default value:** true
+
 
 ### zircon_aux_manifests
  Manifest files describing extra libraries from a Zircon build
@@ -993,7 +1142,9 @@ No values for `target_cpu = "arm64"`.
  merge this and toolchain_manifests into generic aux_manifests.
 
 **Default value for `target_cpu = "x64"`:** ["//out/build-zircon/build-x64-ulib/bootfs.manifest"]
+
 **Default value for `target_cpu = "arm64"`:** ["//out/build-zircon/build-arm64-ulib/bootfs.manifest"]
+
 
 ### zircon_boot_groups
  Groups to include from the Zircon /boot manifest into /boot.
@@ -1003,6 +1154,7 @@ No values for `target_cpu = "arm64"`.
    test -- test binaries in /bin and /test
 
 **Default value:** "core"
+
 
 ### zircon_boot_manifests
  Manifest files describing files to go into the `/boot` filesystem.
@@ -1016,18 +1168,23 @@ No values for `target_cpu = "arm64"`.
  relative to `get_path_info(entry, "dir") + "/.."`.
 
 **Default value for `target_cpu = "x64"`:** ["//out/build-zircon/build-x64/bootfs.manifest"]
+
 **Default value for `target_cpu = "arm64"`:** ["//out/build-zircon/build-arm64/bootfs.manifest"]
+
 
 ### zircon_build_dir
  Zircon build directory for `target_cpu`, containing `.manifest` and
  `.bin` files for Zircon's BOOTFS, BOOTDATA, and kernel image.
 
 **Default value for `target_cpu = "x64"`:** "//out/build-zircon/build-x64"
+
 **Default value for `target_cpu = "arm64"`:** "//out/build-zircon/build-arm64"
+
 
 ### zircon_build_root
 
 **Default value:** "//zircon"
+
 
 ### zircon_system_groups
  TODO(mcgrathr): Could default to "" for !is_debug, or "production
@@ -1037,7 +1194,9 @@ No values for `target_cpu = "arm64"`.
 
 **Default value:** "misc,test"
 
+
 ### zircon_tools_dir
  Where to find Zircon's host-side tools that are run as part of the build.
 
 **Default value:** "//out/build-zircon/tools"
+
